@@ -1,0 +1,10 @@
+NO subir como sitemap.xml independiente. Insertar dentro del <urlset> del sitemap.xml
+EXISTENTE del repositorio principal las entradas que aún falten:
+
+<url><loc>https://konsciohousing.org/terrenos/</loc></url>
+<url><loc>https://konsciohousing.org/socios-industriales/</loc></url>
+<url><loc>https://konsciohousing.org/politica-de-privacidad.html</loc></url>
+
+Confirmar preferencia canónica sin www: el .htaccess de la web principal
+contiene una redirección 301 de www.konsciohousing.org a konsciohousing.org.
+No agregar /participa/ hasta que exista su página real.

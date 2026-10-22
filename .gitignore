@@ -1,0 +1,9 @@
+/vendor/
+/config/mail.local.php
+.env
+.env.*
+!.env.example
+/google-ads/
+/.idea/
+/.vscode/
+.DS_Store

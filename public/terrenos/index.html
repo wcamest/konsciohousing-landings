@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konscio Housing · Terrenos — Activa tu terreno sin venderlo | Fundación Proyecta</title>
+<link rel="canonical" href="https://konsciohousing.org/terrenos/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%23123a2e%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Georgia,serif%27 font-size=%2736%27 fill=%27%23f5f2ea%27 text-anchor=%27middle%27%3EK%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Konscio Housing — Fundación Proyecta KONSCIO" />
+<meta property="og:image" content="https://konsciohousing.org/terrenos/og-terrenos.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="El terreno no se vende. Se activa." />
+<meta name="twitter:description" content="Diagnóstico sin coste para propietarios de grandes terrenos. Konscio Housing · Fundación Proyecta." />
+<meta name="twitter:image" content="https://konsciohousing.org/terrenos/og-terrenos.png" />
+<meta property="og:title" content="Konscio Housing · Programa de Terrenos" />
+<meta property="og:description" content="Activa tu terreno sin venderlo. Un modelo probado sobre 50 ha en Achocalla, La Paz. Diagnóstico sin coste para propietarios." />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:url" content="https://konsciohousing.org/terrenos/" />
+<meta name="description" content="Programa de terrenos de Konscio Housing, promovido por Fundación Proyecta: activación de grandes terrenos en Bolivia, Sudamérica y España. Diagnóstico inicial sin coste." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2a24;          /* tinta verde-negra */
+  --pine:#123a2e;         /* pino profundo, bandas */
+  --moss:#3e6b54;         /* verde medio */
+  --paper:#f5f2ea;        /* papel */
+  --bone:#ebe6d8;         /* hueso, tarjetas */
+  --gold:#b98c2e;         /* sello dorado */
+  --line:#d4cdbb;         /* filetes */
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --serif:'Libre Caslon Text',Georgia,'Times New Roman',serif;
+  --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+/* fondo con retícula de agrimensor, muy tenue */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(to right,rgba(28,42,36,.045) 1px,transparent 1px),
+                   linear-gradient(to bottom,rgba(28,42,36,.045) 1px,transparent 1px);
+  background-size:56px 56px}
+main,header,footer{position:relative;z-index:1}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+a{color:var(--pine)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- barra superior ---------- */
+.top{position:sticky;top:0;background:rgba(245,242,234,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:50}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none;color:var(--ink)}
+.brand b{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.02em}
+.brand span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.btn{display:inline-block;background:var(--pine);color:#f5f2ea;text-decoration:none;font-weight:600;font-size:14.5px;padding:11px 22px;border:1px solid var(--pine);transition:background .18s,color .18s}
+.btn:hover{background:transparent;color:var(--pine)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.gold:hover{background:transparent;color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--pine)}
+.btn.ghost:hover{background:var(--pine);color:#f5f2ea}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5.2vw,58px);line-height:1.08;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--pine)}
+.hero p.lead{font-size:18.5px;color:#414b44;margin:22px 0 30px;max-width:34em}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.trust{font-family:var(--mono);font-size:11.5px;color:#6d756e;margin-top:18px;letter-spacing:.04em}
+
+/* plano de parcela (firma) */
+.plan{border:1px solid var(--line);background:#f0ece1;box-shadow:0 1px 0 #fff inset, 0 14px 34px -22px rgba(18,58,46,.45);position:relative}
+.plan-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6d756e}
+.plan svg{display:block;width:100%;height:auto}
+.zone{cursor:default}
+.zone:hover .zfill{fill:rgba(185,140,46,.28)}
+.zlabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;fill:#414b44}
+.draw{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.2s ease .15s forwards}
+.draw.d2{animation-delay:.55s}.draw.d3{animation-delay:.95s}.draw.d4{animation-delay:1.3s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.draw{stroke-dasharray:none;stroke-dashoffset:0;animation:none}}
+
+/* banda de datos del caso */
+.ribbon{background:var(--pine);color:#e9e5d8;margin-top:56px}
+.ribbon .wrap{display:flex;flex-wrap:wrap;gap:0;padding-top:18px;padding-bottom:18px}
+.stat{flex:1 1 200px;padding:6px 26px;border-left:1px solid rgba(233,229,216,.22)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .n{font-family:var(--serif);font-size:26px;color:#f5f2ea}
+.stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#a9c3b4;margin-top:2px}
+
+/* ---------- secciones ---------- */
+section{padding:72px 0}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:26px;height:1px;background:var(--gold)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(27px,3.4vw,36px);line-height:1.15;max-width:22em;margin-bottom:14px}
+.sub{color:#414b44;max-width:44em;margin-bottom:40px}
+
+/* problema */
+.friction{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.friction>div{background:var(--paper);padding:26px 24px}
+.friction h3{font-family:var(--serif);font-size:19px;font-weight:400;margin-bottom:8px}
+.friction p{font-size:15px;color:#4b554e}
+
+/* propuesta: libro de aportaciones */
+.ledger{border:1px solid var(--line);background:var(--bone)}
+.ledger-head{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.ledger-head>div{padding:14px 24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.ledger-head>div:first-child{border-right:1px solid var(--line);color:var(--gold)}
+.ledger-head>div:last-child{color:#f5f2ea;background:var(--pine)}
+.ledger-body{display:grid;grid-template-columns:1fr 1fr}
+.ledger-body>div{padding:22px 24px}
+.ledger-body>div:first-child{border-right:1px solid var(--line)}
+.ledger ul{list-style:none}
+.ledger li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+.ledger li:last-child{border-bottom:none}
+.ledger li b{font-weight:600}
+.ledger .fine{padding:14px 24px;border-top:1px solid var(--line);font-size:12.5px;color:#6d756e;font-family:var(--mono);letter-spacing:.02em}
+
+/* proceso */
+.steps{counter-reset:paso;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.step{border-top:2px solid var(--pine);padding-top:16px}
+.step::before{counter-increment:paso;content:"FASE " counter(paso);font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--gold)}
+.step h3{font-family:var(--serif);font-size:18.5px;font-weight:400;margin:8px 0 6px}
+.step p{font-size:14.5px;color:#4b554e}
+.step .when{display:block;margin-top:10px;font-family:var(--mono);font-size:11px;color:#6d756e;letter-spacing:.06em}
+
+/* caso */
+.caso{background:var(--pine);color:#e9e5d8}
+.caso .kicker{color:#a9c3b4}
+.caso h2{color:#f5f2ea}
+.caso .sub{color:#b7c9bd}
+.caso-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+.caso-grid p{color:#d7dcd2}
+.caso ul{list-style:none;margin-top:18px}
+.caso li{padding:11px 0;border-bottom:1px solid rgba(233,229,216,.18);font-size:15.5px;display:flex;gap:12px}
+.caso li::before{content:"—";color:var(--gold)}
+.caso .note{font-family:var(--mono);font-size:11px;color:#8fa898;margin-top:20px;letter-spacing:.04em}
+.caso .card{border:1px solid rgba(233,229,216,.3);padding:26px;background:rgba(255,255,255,.04)}
+.caso .card .big{font-family:var(--serif);font-size:44px;color:#f5f2ea;line-height:1}
+.caso .card .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#a9c3b4;margin:8px 0 18px}
+.caso .card table{width:100%;border-collapse:collapse;font-size:14px}
+.caso .card td{padding:8px 0;border-bottom:1px dashed rgba(233,229,216,.22);vertical-align:top}
+.caso .card td:last-child{text-align:right;color:#f5f2ea}
+
+/* tres líneas */
+.lines{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.line{border:1px solid var(--line);background:var(--bone);padding:24px}
+.line .ref{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--gold)}
+.line h3{font-family:var(--serif);font-size:19px;font-weight:400;margin:8px 0 8px}
+.line p{font-size:14.5px;color:#4b554e}
+.line .ing{display:block;margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--moss);letter-spacing:.04em}
+
+/* dónde operamos */
+.mapa{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mapa>div{border:1px solid var(--line);padding:22px;background:var(--paper)}
+.mapa h3{font-family:var(--serif);font-size:18px;font-weight:400;margin-bottom:6px}
+.mapa .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--gold);color:var(--gold);margin-bottom:10px}
+.mapa p{font-size:14.5px;color:#4b554e}
+
+/* faq */
+.faq{max-width:780px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-family:var(--serif);font-size:18px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--gold);font-size:20px}
+.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 0 20px;color:#414b44;font-size:15.5px;max-width:58em}
+
+/* contacto */
+.contacto{background:var(--bone);border-top:1px solid var(--line)}
+.contacto .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#54604f}
+input,select,textarea{font-family:var(--sans);font-size:15.5px;padding:11px 12px;border:1px solid #c9c2af;background:var(--paper);color:var(--ink);border-radius:0}
+textarea{min-height:96px;resize:vertical}
+form .btn{grid-column:1/-1;justify-self:start;cursor:pointer;font-size:15.5px}
+.formnote{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:#6d756e;letter-spacing:.03em}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:4px 10px;margin-bottom:16px}
+.contacto h2{margin-bottom:10px}
+
+/* pie */
+footer{background:var(--ink);color:#aeb8ae;padding:40px 0 48px;font-size:12.5px;line-height:1.7}
+footer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+footer b{color:#e9e5d8;font-weight:600}
+footer .brandline{font-family:var(--serif);color:#f5f2ea;font-size:16px;margin-bottom:8px}
+
+@media (max-width:920px){
+  .hero .wrap{grid-template-columns:1fr}
+  .friction,.lines,.mapa,.steps{grid-template-columns:1fr}
+  .ledger-head,.ledger-body{grid-template-columns:1fr}
+  .ledger-head>div:first-child,.ledger-body>div:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  .caso-grid,.contacto .grid{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .ribbon .wrap{flex-direction:column;gap:14px}
+  .stat{border-left:none;padding-left:0}
+  section{padding:52px 0}
+}
+.brandrow{display:flex;align-items:center;gap:18px;min-width:0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--pine);background:rgba(255,255,255,.55);padding:8px 14px;border-radius:4px;transition:border-color .18s,background .18s,box-shadow .18s}
+.brand:hover{border-color:var(--gold);background:#fff;box-shadow:0 2px 8px -4px rgba(18,58,46,.35)}
+.brandtxt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.brandtxt b{font-family:var(--serif);font-weight:700;font-size:18px;letter-spacing:.02em;line-height:1.1;color:var(--ink)}
+.brandtxt span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);white-space:nowrap}
+.lg{height:36px;width:auto;flex:0 0 auto;display:block}
+.ext{font-style:normal;color:var(--gold);font-size:12px;font-weight:700}
+.fundbadge{display:flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--line);background:rgba(255,255,255,.55);padding:7px 12px;border-radius:4px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:border-color .18s,background .18s}
+.fundbadge:hover{border-color:var(--gold);background:#fff}
+.fundbadge span{white-space:nowrap}
+.topnav{display:flex;align-items:center;gap:20px}
+.topnav>a{text-decoration:none;font-size:13.5px;font-weight:600;color:var(--ink);border-bottom:2px solid transparent;padding-bottom:3px;white-space:nowrap}
+.topnav>a:hover{border-bottom-color:var(--gold)}
+.topnav>a.navon{color:var(--pine);border-bottom-color:var(--pine);cursor:default}
+.topnav .btn{padding:9px 18px;font-size:13.5px;border-bottom:1px solid var(--gold)}
+@media (max-width:920px){.top .wrap{height:auto;flex-wrap:wrap;gap:12px;padding-top:10px;padding-bottom:10px}.brandrow{flex-wrap:wrap}.topnav{width:100%;justify-content:space-between;gap:12px}}
+.top .wrap{flex-wrap:wrap;row-gap:10px;padding-top:8px;padding-bottom:8px;height:auto;min-height:60px}
+.topnav{flex-wrap:wrap;row-gap:8px}
+@media (max-width:1150px){.topnav{width:100%;order:3;justify-content:flex-start;gap:16px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brandrow">
+      <a class="brand brandlink" href="https://konsciohousing.org" target="_blank" rel="noopener" title="Visitar la web del proyecto Konscio Housing — se abre en una pestaña nueva; aquí sigues en el programa">
+        <img class="lg" src="data:image/png;base64,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" alt="KONSCIO HOUSING 3D">
+        <span class="brandtxt"><span>Programa de Terrenos</span></span>
+        <em class="ext" aria-hidden="true">↗</em>
+      </a>
+      <a class="fundbadge" href="https://proyectakonscio.org" target="_blank" rel="noopener" title="Fundación Proyecta — web oficial de la Fundación (se abre en una pestaña nueva)">
+        <img class="lg" src="data:image/png;base64,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" alt="Fundación Proyecta">
+        <span>Fundación Proyecta</span>
+        <em class="ext" aria-hidden="true">↗</em>
+      </a>
+    </div>
+    <nav class="topnav">
+      <a class="navon" href="/terrenos/" aria-current="page">Terrenos</a>
+      <a href="/socios-industriales/">Socios Industriales</a>
+      <a class="btn gold" href="#diagnostico">Solicitar diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Activación de terrenos · Bolivia, Sudamérica y España</p>
+      <h1>El terreno no se vende.<br><em>Se activa.</em></h1>
+      <p class="lead">Trabajamos con propietarios de grandes terrenos que no quieren malvender hoy ni esperar décadas a que el suelo valga algo por sí solo. Aportamos la estructura, el capital y la tecnología para convertirlo en un proyecto productivo — y el terreno sigue siendo tuyo.</p>
+      <div class="cta-row">
+        <a class="btn gold" href="#diagnostico">Solicitar diagnóstico sin coste</a>
+        <a class="btn ghost" href="#caso">Ver el caso Condorini</a>
+      </div>
+      <p class="trust">Diagnóstico inicial sin coste ni compromiso · Confidencialidad desde el primer contacto · <a href="/socios-industriales/">¿Eres constructora? Ruta de socios industriales →</a></p>
+    </div>
+
+    <figure class="plan" aria-label="Plano tipo de parcela con las tres líneas de negocio">
+      <div class="plan-head"><span>PLANO DE ACTIVACIÓN · ESQUEMA</span><span>ESC 1:2.500</span></div>
+      <svg viewBox="0 0 560 420" role="img" aria-label="Parcela dividida en tres zonas: urbanización, vivienda cooperativa 3D y bosque memorial">
+        <!-- retícula -->
+        <g stroke="#cfc8b4" stroke-width="1">
+          <path d="M0 70H560 M0 140H560 M0 210H560 M0 280H560 M0 350H560"/>
+          <path d="M70 0V420 M140 0V420 M210 0V420 M280 0V420 M350 0V420 M420 0V420 M490 0V420"/>
+        </g>
+        <!-- curvas de nivel -->
+        <g fill="none" stroke="#c4bca4" stroke-width="1" stroke-dasharray="3 4">
+          <path d="M20 90 C 140 60, 260 110, 540 70"/>
+          <path d="M20 200 C 160 160, 320 230, 540 180"/>
+          <path d="M20 320 C 180 280, 340 350, 540 300"/>
+        </g>
+        <!-- perímetro de la finca -->
+        <path class="draw" d="M40 40 L430 30 L520 130 L530 330 L360 395 L60 370 Z" fill="#e7e2d2" stroke="#123a2e" stroke-width="2.2"/>
+        <!-- zona A: urbanización -->
+        <g class="zone">
+          <path class="zfill" d="M70 70 L300 62 L330 160 L95 175 Z" fill="rgba(62,107,84,.14)" stroke="#3e6b54" stroke-width="1.6"/>
+          <g stroke="#3e6b54" stroke-width=".8" opacity=".7">
+            <path d="M110 74 V171 M150 72 V173 M190 71 V174 M230 69 V175 M270 66 V176"/>
+            <path d="M74 105 H322 M72 140 H326"/>
+          </g>
+          <text class="zlabel" x="86" y="58">A · URBANIZACIÓN</text>
+        </g>
+        <!-- zona B: housing 3D -->
+        <g class="zone">
+          <path class="zfill" d="M350 60 L500 80 L516 200 L340 190 Z" fill="rgba(185,140,46,.16)" stroke="#b98c2e" stroke-width="1.6"/>
+          <g fill="#b98c2e" opacity=".85">
+            <rect x="378" y="96" width="26" height="18"/><rect x="416" y="92" width="26" height="18"/>
+            <rect x="454" y="96" width="26" height="18"/><rect x="396" y="132" width="26" height="18"/>
+            <rect x="434" y="130" width="26" height="18"/>
+          </g>
+          <text class="zlabel" x="362" y="52">B · VIVIENDA 3D</text>
+        </g>
+        <!-- zona C: memorial forest -->
+        <g class="zone">
+          <path class="zfill" d="M80 200 L330 192 L345 360 L75 350 Z" fill="rgba(18,58,46,.16)" stroke="#123a2e" stroke-width="1.6"/>
+          <g stroke="#123a2e" stroke-width="1.4" fill="none">
+            <path d="M110 240 l10 -16 l10 16 M120 224 v22"/>
+            <path d="M160 260 l10 -16 l10 16 M170 244 v24"/>
+            <path d="M210 236 l10 -16 l10 16 M220 220 v24"/>
+            <path d="M260 268 l10 -16 l10 16 M270 252 v26"/>
+            <path d="M130 310 l10 -16 l10 16 M140 294 v26"/>
+            <path d="M190 322 l10 -16 l10 16 M200 306 v26"/>
+            <path d="M250 316 l10 -16 l10 16 M260 300 v26"/>
+            <path d="M292 262 l10 -16 l10 16 M302 246 v26"/>
+          </g>
+          <text class="zlabel" x="92" y="190">C · BOSQUE MEMORIAL</text>
+        </g>
+        <!-- camino de acceso -->
+        <path class="draw d2" d="M330 160 C 340 240, 340 300, 345 360" fill="none" stroke="#8a6f3a" stroke-width="2" stroke-dasharray="7 5"/>
+        <path class="draw d3" d="M40 40 L430 30 L520 130 L530 330 L360 395 L60 370 Z" fill="none" stroke="#123a2e" stroke-width="2.2"/>
+        <!-- rótulo -->
+        <g>
+          <rect x="352" y="300" width="150" height="64" fill="#f5f2ea" stroke="#c9c2af"/>
+          <text x="364" y="322" font-family="IBM Plex Mono,monospace" font-size="10" fill="#1c2a24" letter-spacing="1">REF. KC — 01</text>
+          <text x="364" y="338" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6d756e">UNA FINCA · TRES LÍNEAS</text>
+          <text x="364" y="352" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6d756e">PROPIEDAD: EL PROPIETARIO</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+
+  <!-- banda de datos del caso de referencia -->
+  <div class="ribbon">
+    <div class="wrap">
+      <div class="stat"><div class="n">50 ha</div><div class="l">Activo en estructuración — Achocalla, La Paz</div></div>
+      <div class="stat"><div class="n">13 M USD</div><div class="l">Avalúo bancario referencial del terreno</div></div>
+      <div class="stat"><div class="n">3 líneas</div><div class="l">Negocio conectadas sobre el mismo suelo</div></div>
+      <div class="stat"><div class="n">1 modelo</div><div class="l">Diseñado para replicarse por nodos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Por qué aquí</p>
+    <h2>Un terreno grande es una fortuna quieta.</h2>
+    <p class="sub">Quien posee decenas de hectáreas cerca de ciudades en crecimiento conoce bien tres opciones, y ninguna convence del todo.</p>
+    <div class="friction">
+      <div>
+        <h3>Vender hoy</h3>
+        <p>Es convertir un activo que se revaloriza en dinero que se gasta. Y el precio de venta directa de suelo sin urbanizar suele estar muy por debajo de lo que el terreno puede llegar a valer desarrollado.</p>
+      </div>
+      <div>
+        <h3>Urbanizar por cuenta propia</h3>
+        <p>Exige años de gestión, planos, licencias, obras de urbanización y capital — con riesgo técnico y regulatorio que pocos propietarios quieren o deben asumir solos.</p>
+      </div>
+      <div>
+        <h3>Esperar</h3>
+        <p>Mientras el terreno no produce, sí cuesta: impuestos, cierres, carencias y oportunidades que se pierden. El tiempo también tiene precio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROPUESTA ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">La propuesta</p>
+    <h2>Tú pones el terreno. Nosotros, todo lo que falta para que produzca.</h2>
+    <p class="sub">Estructuramos en tu terreno el mismo modelo que ya estamos construyendo en Achocalla: urbanización planificada, vivienda cooperativa construida con impresión 3D y un bosque memorial ecológico y digital. Cada línea aporta su caja; todas comparten infraestructura.</p>
+    <div class="ledger">
+      <div class="ledger-head">
+        <div>El propietario aporta</div>
+        <div>Konscio aporta</div>
+      </div>
+      <div class="ledger-body">
+        <div>
+          <ul>
+            <li><b>El suelo.</b> El terreno permanece en tu sociedad o patrimonio. No lo compramos y no te lo pedimos en propiedad.</li>
+            <li><b>Conocimiento local.</b> Realidad del municipio, jerarquías, oficios y confianza de la zona: imposible comprarla.</li>
+            <li><b>Capacidad constructiva</b> cuando exista, como ocurre con nuestros socios de La Paz: cuadrillas, maquinaria, proveedores.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><b>Estructuración completa.</b> Sociedad del proyecto, acuerdo de desarrollo, plan urbanístico y arquitectura legal y financiera.</li>
+            <li><b>Capital de desarrollo.</b> Diseñamos y dirigimos la captación por fases, empezando por una fase piloto acotada.</li>
+            <li><b>Tecnología y modelo.</b> Impresión 3D de vivienda, línea memorial con plataforma digital y tokenización de la financiación explicada con palabras de siempre.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">La titularidad del suelo no se transfiere. El reparto de valor —con rentabilidad atractiva para el propietario— se pacta por escrito antes de ninguna obra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Cómo funciona</p>
+    <h2>Cuatro fases, con puerta de salida en cada una.</h2>
+    <p class="sub">Ninguna fase empieza sin la anterior cerrada por escrito. Y ninguna te obliga a la siguiente.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Contacto reservado</h3>
+        <p>Nos cuentas qué terreno tienes, dónde y en qué situación. Firmamos confidencialidad antes de que nos enseñes nada sensible.</p>
+        <span class="when">Semana 1</span>
+      </div>
+      <div class="step">
+        <h3>Diagnóstico del terreno</h3>
+        <p>Estudiamos ubicación, superficie, titulación, norm urbanística y potencial real. Te entregamos un informe con un veredicto claro: sigue o no sigue.</p>
+        <span class="when">Semanas 2–4 · sin coste</span>
+      </div>
+      <div class="step">
+        <h3>Acuerdo de estructura</h3>
+        <p>Si el diagnóstico es positivo, pactamos el marco: qué aporta cada parte, cómo se reparte el valor y qué fase se desarrolla primero. Todo revisado por abogado.</p>
+        <span class="when">Mes 2</span>
+      </div>
+      <div class="step">
+        <h3>Activación</h3>
+        <p>Delimitamos la fase piloto, estructuramos su financiación y ponemos en marcha urbanización, vivienda 3D y línea memorial. Con reporting periódico al propietario.</p>
+        <span class="when">Desde el mes 3</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASO ============ -->
+<section class="caso" id="caso">
+  <div class="wrap">
+    <p class="kicker">Caso de referencia</p>
+    <h2>Condorini: así se ve el modelo funcionando.</h2>
+    <p class="sub">En Achocalla, La Paz (Bolivia), dos propietarios-constructores aportaron su terreno —~50 hectáreas con avalúo bancario referencial de 13 M USD— y su capacidad operativa. Nosotros aportamos la estructura: una promotora dedicada, la arquitectura del proyecto y el diseño de la financiación por fases.</p>
+    <div class="caso-grid">
+      <div>
+        <p>El terreno se concentró en la sociedad patrimonial de sus propietarios, que siguen siendo los dueños. La promotora del proyecto se creó aparte — Konscio Bolivia S.A. — con sus propios socios y gobernanza. Sobre el activo operan tres líneas que se retroalimentan, y la primera emisión se diseña sobre una fase piloto delimitada — nunca sobre todo el terreno de golpe.</p>
+        <ul>
+          <li>Separación clara entre la propiedad del suelo y la sociedad que desarrolla el proyecto.</li>
+          <li>Plan financiero por fases, empezando por una fase de estructuración austera antes de invertir en obra.</li>
+          <li>Financiación diseñada para inversores profesionales, con el suelo real como respaldo.</li>
+          <li>Los propietarios participan además como operadores constructivos del desarrollo.</li>
+        </ul>
+        <p class="note">Cifras tomadas de los documentos de trabajo del proyecto Konscio Condorini. Son referenciales y no constituyen oferta ni compromiso de rentabilidad.</p>
+      </div>
+      <div class="card">
+        <div class="big">50 ha</div>
+        <div class="lbl">Achocalla · La Paz · Bolivia</div>
+        <table>
+          <tr><td>Avalúo bancario referencial</td><td>13 M USD</td></tr>
+          <tr><td>Criterio prudente de trabajo</td><td>11,5 M USD</td></tr>
+          <tr><td>Líneas de negocio</td><td>3</td></tr>
+          <tr><td>Fase inicial prevista</td><td>20–70 k USD</td></tr>
+          <tr><td>Ronda de activación prevista</td><td>hasta 2 M USD</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRES LÍNEAS ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Qué se construye en tu terreno</p>
+    <h2>Tres líneas que se sostienen entre sí.</h2>
+    <p class="sub">No depende todo de una sola: la urbanización crea el soporte, la vivienda 3D da velocidad y diferenciación, y el bosque memorial aporta ingresos recurrentes que no consumen suelo urbanizable.</p>
+    <div class="lines">
+      <div class="line">
+        <span class="ref">LÍNEA 1</span>
+        <h3>Urbanización y parcelación residencial</h3>
+        <p>Parcelación ordenada, vialidad interna, servicios básicos y áreas verdes. Parcelas para autoconstruir, para invertir o para integrarse en el modelo cooperativo.</p>
+        <span class="ing">Ingreso: venta de parcelas · caja inicial</span>
+      </div>
+      <div class="line">
+        <span class="ref">LÍNEA 2</span>
+        <h3>Vivienda cooperativa impresa en 3D</h3>
+        <p>Autoconstrucción asistida con impresoras 3D como infraestructura productiva permanente del proyecto: casas, mobiliario urbano y servicios de impresión para terceros.</p>
+        <span class="ing">Ingreso: parcelas cooperativas + servicios de impresión</span>
+      </div>
+      <div class="line">
+        <span class="ref">LÍNEA 3</span>
+        <h3>Bosque memorial ecológico y digital</h3>
+        <p>Cápsulas biodegradables que convierten cenizas en un árbol georreferenciado, con espacio memorial digital asociado. Ingreso inicial por unidad y recurrente por mantenimiento.</p>
+        <span class="ing">Ingreso: unidad inicial + mantenimiento recurrente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DÓNDE ============ -->
+<section style="padding-top:0">
+
+  <div class="wrap">
+    <h2>¿No tienes terreno, pero quieres participar?</h2>
+    <p class="sub">El modelo se financia con capital descentralizado: personas que participan en el proyecto —como copartícipes del negocio o para conseguir su vivienda— entran a través de vehículos de tokenización de activos reales, siempre por escrito y con condiciones públicas antes de ninguna firma.</p>
+    <p>El desarrollo del proyecto cuenta con <b>advisors de renombre internacional</b> en tokenización de activos reales y economía residencial, que acompañan la estructura de cada ronda desde el primer día. La próxima ronda de activación del programa se anunciará en esta página y por WhatsApp.</p>
+    <p style="margin-top:14px"><a class="btn" style="background:#25d366;border-color:#25d366" href="https://wa.me/34640386181?text=Hola%2C%20quiero%20que%20me%20avis%C3%A9is%20cuando%20se%20abra%20la%20pr%C3%B3xima%20ronda%20de%20participaci%C3%B3n">Avisadme cuando se abra la próxima ronda</a></p>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Dónde operamos</p>
+    <h2>Cerca de ciudades en crecimiento.</h2>
+    <p class="sub">Buscamos terrenos con potencial urbano real, titulación saneada y propietarios que piensen en décadas, no en trimestres.</p>
+    <div class="mapa">
+      <div>
+        <span class="tag">Primera operación</span>
+        <h3>Bolivia</h3>
+        <p>Achocalla, La Paz, es nuestra operación en curso y la referencia del modelo. Abiertos a nuevos terrenos en el eje La Paz–El Alto y otras zonas en expansión.</p>
+      </div>
+      <div>
+        <span class="tag">En estudio</span>
+        <h3>Sudamérica</h3>
+        <p>Países con crecimiento periurbano y marcos regulatorios en evolución para la financiación tokenizada de activos reales. Cada país se valida caso por caso con asesoría local.</p>
+      </div>
+      <div>
+        <span class="tag">En estudio</span>
+        <h3>España</h3>
+        <p>Suelo periurbano y patrimonio rural heredado sin activar. Analizamos encaje bajo la normativa europea y española antes de comprometer estructuras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Preguntas de propietarios</p>
+    <h2>Lo que nos preguntan antes de firmar.</h2>
+    <div class="faq">
+      <details>
+        <summary>¿Tengo que vender o hipotecar mi terreno?</summary>
+        <div class="a">No. El suelo permanece en tu patrimonio o en tu sociedad. Lo que se pacta es un acuerdo de desarrollo: qué se construye, quién pone cada cosa y cómo se reparte el valor. La titularidad no se transfiere a Konscio.</div>
+      </details>
+      <details>
+        <summary>¿Quién pone el dinero?</summary>
+        <div class="a">La financiación se estructura por fases y se dirige a inversores profesionales, con el propio proyecto y sus flujos como respaldo. La fase de estructuración es austera; la obra se financia cuando el proyecto ya está preparado para captar capital de forma segura.</div>
+      </details>
+      <details>
+        <summary>¿Qué significa eso de "tokenización"?</summary>
+        <div class="a">Es la forma en que se financia hoy parte del desarrollo: se parece a lo que en el ladrillo de siempre son las preventas y la participación en ingresos de una fase, pero registrado digitalmente y con más transparencia sobre quién aporta y qué recibe. Tu contrato contigo con nosotros se firma en lenguaje jurídico clásico, no en palabras raras.</div>
+      </details>
+      <details>
+        <summary>¿Esto es una ONG o un negocio?</summary>
+        <div class="a">Las dos cosas, por diseño. Los proyectos son negocios reales: se estructuran para que propietarios e inversores obtengan rentabilidades atractivas sin recurrir a la especulación. Y la Fundación que los promueve dedica su parte a proyectos sociales. Esa combinación es lo que hace el modelo estable y repetible.</div>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta el diagnóstico?</summary>
+        <div class="a">El diagnóstico inicial no tiene coste ni compromiso. Solo si decides avanzar se pacta la estructura económica del proyecto, por escrito y antes de cualquier gasto relevante.</div>
+      </details>
+      <details>
+        <summary>¿Qué pasa si el diagnóstico dice que mi terreno no encaja?</summary>
+        <div class="a">Te lo decimos con claridad y sin ruido. No todos los terrenos encajan: preferimos decir que no a forzar un proyecto que no funciona. En muchos casos el informe sirve igualmente para conocer el potencial real de tu suelo.</div>
+      </details>
+      <details>
+        <summary>¿Qué información necesitáis para empezar?</summary>
+        <div class="a">Ubicación y superficie aproximadas, situación de la titularidad (persona física o sociedad) y, si la conoces, la calificación urbanística. Con la confidencialidad firmada, pedimos lo demás. Nunca necesitamos la documentación sensible en el primer contacto.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ TESTIMONIOS ============ -->
+<!-- TESTIMONIOS AUTORIZADOS POR CARLOS BELMONTE Y LUPE IRIARTE (OCTUBRE 2026).
+     NO PUBLICAR SIN SU CONFIRMACIÓN ESCRITA. COMPLETAR LOS CAMPOS ENTRE CORCHETES. -->
+<section id="testimonios" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">La palabra de quienes ya están dentro</p>
+    <h2>Propietarios que ya viven el modelo.</h2>
+    <p class="sub">Carlos y Lupe aportaron su terreno y su capacidad constructiva al proyecto de Achocalla. Estos son los mensajes que quieren transmitir a otros propietarios que hoy están donde ellos estaban.</p>
+    <div class="friction">
+      <div>
+        <p style="font-family:var(--serif);font-size:17px;line-height:1.5">«Llevábamos años mirando el terreno y pensando qué hacer con él. Venderlo se nos quedaba corto y urbanizarlo solos no lo podíamos intentar. Con Konscio pusimos el suelo y la capacidad que ya teníamos; ellos pusieron la estructura. El terreno sigue siendo nuestro — pero ahora tiene un plan.»</p>
+        <p style="margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--moss)">Carlos Belmonte · Propietario y socio operativo · Achocalla, La Paz</p>
+      </div>
+      <div>
+        <p style="font-family:var(--serif);font-size:17px;line-height:1.5">«Lo que más nos frenaba era lanzarnos con desconocidos. Aquí todo se pactó por escrito antes de mover una piedra: qué aporta cada parte y cómo se reparte el valor. Eso nos dio la tranquilidad de avanzar sin soltar el terreno.»</p>
+        <p style="margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--moss)">Lupe Iriarte · Propietaria y socio operativo · Achocalla, La Paz</p>
+      </div>
+      <div>
+        <p style="font-family:var(--serif);font-size:17px;line-height:1.5">«Nuestro compromiso con quien venga detrás es simple: contaremos lo que hicimos, cómo lo hicimos y qué nos costó. Este proyecto se sostiene sobre propietarios que se quedan, no sobre promesas que se van.»</p>
+        <p style="margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--moss)">Carlos y Lupe · Sobre su compromiso con el programa</p>
+      </div>
+    </div>
+    <p style="margin-top:22px;color:#414b44;max-width:52em"><b>Trayectoria.</b> Carlos Belmonte y Lupe Iriarte son constructores de referencia en La Paz, con <b>muchos años</b> de trayectoria en La Paz y obras de referencia como los <b>edificios Vitruvio 1 y Vitruvio 2</b> a sus espaldas. Al proyecto Konscio Condorini aportaron el terreno —unas 50 hectáreas concentradas en su sociedad patrimonial— y su capacidad operativa: equipos, oficios y gestión de obra. Hoy participan como propietarios y como socios operativos del desarrollo, y comparten con otros propietarios la misma experiencia: seguir siendo dueños del suelo y, por primera vez en años, verlo con un proyecto encima.</p>
+    <p style="margin-top:10px;font-family:var(--mono);font-size:10.5px;color:#6d756e;letter-spacing:.04em">Testimonios publicados con autorización expresa de sus autores.</p>
+  </div>
+</section>
+
+<!-- ============ FUNDACIÓN Y DESTINO SOCIAL ============ -->
+<section class="caso" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Quién promueve</p>
+    <h2>Fundación Proyecta promueve el programa. El negocio es de los proyectos.</h2>
+    <div class="caso-grid">
+      <div>
+        <p>Este programa lo promueve <b style="color:#f5f2ea">Fundación Proyecta KONSCIO</b>, entidad sin ánimo de lucro que da sentido y método a todo lo que se construye bajo Konscio Housing. Que lo promueva una Fundación no resta negocio — al contrario: los proyectos se diseñan para que <b style="color:#f5f2ea">propietarios e inversores obtengan rentabilidades atractivas</b>, y la Fundación vela por que ese negocio se haga bien: con transparencia, sin especulación y dejando algo permanente en cada lugar donde se construye.</p>
+        <p>El contexto importa. El acceso a la vivienda es hoy uno de los mayores problemas de Europa y América Latina; en septiembre de 2026, las movilizaciones por la vivienda llenaron las calles de más de veinte ciudades españolas. Este modelo existe para responder a ese problema con vivienda real y producible — no con promesas de plusvalía.</p>
+        <p class="note">En el proyecto de Achocalla, la Fundación participa con el 20&nbsp;% de la sociedad promotora. La participación societaria descrita corresponde a la estructura del proyecto Konscio Condorini, expuesta en sus documentos de trabajo.</p>
+      </div>
+      <div class="card">
+        <div class="lbl" style="margin-top:0">Los tres compromisos del modelo</div>
+        <table>
+          <tr><td style="width:38%"><b>Rentabilidad atractiva</b></td><td>Para propietarios e inversores: la estructura se pacta por escrito y se comparte antes de firmar.</td></tr>
+          <tr><td><b>Economía razonable</b></td><td>Vivienda producible a precio accesible: el proyecto gana cuando construye y vende bien, no cuando el suelo se hincha.</td></tr>
+          <tr><td><b>Compromiso social</b></td><td>Del rendimiento que corresponde a la Fundación y de los mecanismos previstos en cada estructura: vivienda social, infancia, igualdad de género.</td></tr>
+        </table>
+        <p class="note" style="margin-top:14px">El porcentaje y el mecanismo de destino social se recogen en la estructura de cada proyecto y se comparten con propietarios e inversores antes de firmar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contacto" id="diagnostico">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="pill">Sin coste · Sin compromiso · Confidencial</span>
+        <p style="margin-bottom:16px"><a class="btn" style="background:#25d366;border-color:#25d366" href="https://wa.me/34640386181?text=Hola%2C%20tengo%20un%20terreno%20sobre%20el%20que%20me%20gustar%C3%ADa%20consultar%20el%20diagn%C3%B3stico%20sin%20coste">Escribir por WhatsApp — respuesta el mismo día</a></p>
+        <h2>Cuéntanos qué terreno tienes.</h2>
+        <p class="sub" style="margin-bottom:22px">Si encaja con el modelo, lo siguiente es una conversación de una hora y un diagnóstico por escrito. Si no encaja, te lo diremos igual de claro.</p>
+        <p style="font-family:var(--mono);font-size:12px;color:#54604f;letter-spacing:.04em">Canal preferido: <b>WhatsApp +34 640 38 61 81</b> — respondemos el mismo día<br>Llamada directa si es necesario: <b>+34 697 318 741</b> · <b>info@proyectakonscio.org</b></p>
+      </div>
+      <form id="f" action="../enviar.php" method="POST" novalidate>
+        <input type="hidden" name="origen" value="Programa de Terrenos">
+        <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="field">
+          <label for="nombre">Nombre y apellidos</label>
+          <input id="nombre" name="nombre" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="contacto">Email o WhatsApp</label>
+          <input id="contacto" name="contacto" type="text" required>
+        </div>
+        <div class="field">
+          <label for="ubicacion">Ubicación del terreno — cualquier país</label>
+          <input id="ubicacion" name="ubicacion" type="text" placeholder="Ej.: Achocalla (La Paz, Bolivia) · Jaén (España) · Cuenca (Ecuador)" required>
+          <small style="color:#54604f;font-size:12px">Aceptamos terrenos de España, Iberoamérica y cualquier otro país que nos propongan.</small>
+        </div>
+        <div class="field">
+          <label for="hectareas">Superficie aproximada (ha)</label>
+          <input id="hectareas" name="hectareas" type="number" min="1" placeholder="p. ej. 30" required>
+        </div>
+        <div class="field">
+          <label for="titularidad">Titularidad</label>
+          <select id="titularidad" name="titularidad">
+            <option>Persona física</option>
+            <option>Sociedad / empresa</option>
+            <option>Varios propietarios</option>
+            <option>Herencia en gestión</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="situacion">Situación urbanística</label>
+          <select id="situacion" name="situacion">
+            <option>No la conozco</option>
+            <option>Rústico / sin urbanizar</option>
+            <option>Urbanizable</option>
+            <option>Con plan parcial en curso</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="mensaje">Algo que debamos saber</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Opcional"></textarea>
+        </div>
+        <div class="field full" style="flex-direction:row;align-items:flex-start;gap:10px">
+          <input id="consent" name="consent" type="checkbox" required style="width:18px;height:18px;margin-top:2px">
+          <label for="consent" style="text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:13px;color:#414b44">He leído la información sobre protección de datos y consiento que <b>Fundación Proyecta</b> trate mis datos para responder a esta solicitud. <a href="#legal">Detalle aquí</a>.</label>
+        </div>
+        <button class="btn gold" type="submit">Enviar y solicitar diagnóstico</button>
+        <div id="ok" class="formok" hidden>Mensaje enviado correctamente. En breve nos pondremos en contacto.</div>
+        <div id="err" class="formerr" hidden>No se pudo enviar el mensaje. Escríbenos por WhatsApp al <b>+34 640 38 61 81</b> o a info@proyectakonscio.org.</div>
+        <p class="formnote">Tu solicitud llega directamente a <b>info@proyectakonscio.org</b> y te respondemos el mismo día. Este sitio no utiliza cookies ni herramientas de análisis. <a href="../politica-de-privacidad.html">Información sobre protección de datos</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="legal">
+  <div class="wrap">
+    <div>
+      <p class="brandline">KONSCIO HOUSING · Programa de Terrenos</p>
+      <p>Iniciativa promovida por <b>Fundación Proyecta</b>, entidad sin ánimo de lucro. Activación de activos reales mediante urbanización residencial, vivienda cooperativa impresa en 3D y bosque memorial ecológico-digital. Operación de referencia: Konscio Condorini, Achocalla (La Paz, Bolivia).</p>
+      <p style="margin-top:10px"><b>Contacto</b><br>WhatsApp (preferido): <a href="https://wa.me/34640386181" style="color:#e9e5d8">+34 640 38 61 81</a><br>info@proyectakonscio.org · <a href="tel:+34697318741" style="color:#e9e5d8">+34 697 318 741</a> · <a href="https://proyectakonscio.org" target="_blank" rel="noopener" style="color:#e9e5d8">proyectakonscio.org ↗</a></p>
+    </div>
+    <div>
+      <p><b>Aviso legal.</b> Titular del sitio: Fundación Proyecta KONSCIO · CIF G85954501 · Las Flores nº 3, 18004 Granada, España · Inscrita con el Número 931 del Registro de Fundaciones de España, Ministerio de Cultura. Este sitio tiene finalidad informativa sobre el programa y no constituye oferta de valores, promesa de rentabilidad ni asesoramiento legal, fiscal o financiero. Las cifras del caso Condorini provienen de los documentos internos del proyecto y son referenciales. Toda operación se estructura por escrito, país por país, con asesoría legal local y sin compromiso para el propietario hasta la firma del acuerdo de estructura.</p>
+      <details style="margin-top:12px">
+        <summary style="cursor:pointer;color:#e9e5d8;font-weight:600">Protección de datos (RGPD)</summary>
+        <p style="margin-top:8px"><b>Responsable:</b> Fundación Proyecta. <b>Finalidad:</b> atención y gestión de consultas y candidaturas del programa. <b>Base jurídica:</b> consentimiento del interesado. <b>Conservación:</b> el tiempo necesario para gestionar la solicitud y las obligaciones legales. <b>Derechos:</b> acceso, rectificación, supresión, oposición, limitación y portabilidad, ejercibles en info@proyectakonscio.org, así como reclamación ante la autoridad de control competente. <b>Datos tratados:</b> únicamente los enviados voluntariamente por correo; este sitio no utiliza cookies ni análisis de audiencia. Política completa: <a href="../politica-de-privacidad.html" style="color:#e9e5d8">https://konsciohousing.org/politica-de-privacidad</a></p>
+      </details>
+      <p style="margin-top:12px">© 2026 Fundación Proyecta · konsciohousing.org · Otras rutas: <a href="/terrenos/" style="color:#e9e5d8">Programa de Terrenos</a> · <a href="/socios-industriales/" style="color:#e9e5d8">Socios Industriales</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var ff=document.getElementById('f');
+function konsOK(){var o=document.getElementById('ok');document.getElementById('err').hidden=true;o.hidden=false;o.scrollIntoView({behavior:'smooth',block:'center'});}
+function konsERR(){var r=document.getElementById('err');document.getElementById('ok').hidden=true;r.hidden=false;r.scrollIntoView({behavior:'smooth',block:'center'});}
+if(location.search.indexOf('enviado=1')>-1){konsOK();}
+if(location.search.indexOf('error=1')>-1){konsERR();}
+ff.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!document.getElementById('consent').checked){document.getElementById('consent').focus();return;}
+  var btn=ff.querySelector('button[type=submit]');btn.disabled=true;
+  fetch(ff.getAttribute('action'),{method:'POST',body:new FormData(ff),headers:{'X-Requested-With':'XMLHttpRequest','Accept':'application/json'}})
+  .then(function(r){return r.json().catch(function(){return {ok:false};});})
+  .then(function(j){ if(j&&j.ok){ff.reset();konsOK();} else {konsERR();} })
+  .catch(function(){konsERR();})
+  .then(function(){btn.disabled=false;});
+});
+</script>
+<style>
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(0,0,0,.45)}
+.wa svg{width:28px;height:28px;fill:#fff}
+.formok{background:#e7f3ec;border:1.5px solid #0e6b57;color:#0e6b57;font-weight:700;padding:12px 14px;border-radius:6px;margin-top:14px;font-family:var(--sans);font-size:14px;text-align:center}
+.formerr{background:#f7e9e7;border:1.5px solid #b0574a;color:#8f3d31;font-weight:700;padding:12px 14px;border-radius:6px;margin-top:14px;font-family:var(--sans);font-size:14px;text-align:center}
+</style><a class="wa" href="https://wa.me/34640386181?text=Hola%2C%20tengo%20un%20terreno%20sobre%20el%20que%20me%20gustar%C3%ADa%20consultar%20el%20diagn%C3%B3stico%20sin%20coste" aria-label="Escribir por WhatsApp" title="Escribir por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body>
+</html>

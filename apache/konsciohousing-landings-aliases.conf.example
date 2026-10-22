@@ -1,0 +1,32 @@
+# COPIAR estas reglas dentro del VirtualHost *:443 YA EXISTENTE
+# para konsciohousing.org. NO crear un segundo VirtualHost con ServerName igual.
+# Sustituye /var/www/konsciohousing-landings si clonas en otra ruta.
+# Alias es apropiado si la web principal sirve HTML/PHP desde DocumentRoot.
+
+# NOTA: el .htaccess del sitio principal redirige www -> sin www, pero al
+# servir Alias fuera del DocumentRoot puede no aplicarse a estas landings.
+# Si no existe ya en el VirtualHost una regla equivalente, activar:
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTP_HOST} ^www\.konsciohousing\.org$ [NC]
+#     RewriteRule ^ https://konsciohousing.org%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+Alias "/terrenos" "/var/www/konsciohousing-landings/public/terrenos"
+Alias "/socios-industriales" "/var/www/konsciohousing-landings/public/socios-industriales"
+Alias "/politica-de-privacidad.html" "/var/www/konsciohousing-landings/public/politica-de-privacidad.html"
+Alias "/enviar.php" "/var/www/konsciohousing-landings/public/enviar.php"
+
+<Directory "/var/www/konsciohousing-landings/public">
+    Options -Indexes
+    AllowOverride None
+    Require all granted
+    DirectoryIndex index.html
+</Directory>
+
+# MUY IMPORTANTE: el handler PHP-FPM/mod_php debe estar ACTIVO también
+# para el archivo /var/www/konsciohousing-landings/public/enviar.php.
+# Si el VirtualHost tiene ProxyPass "/" de captura general, debe
+# excluir ANTES estas cuatro rutas con ProxyPass "..." "!".
+# Para Apache + PHP-FPM se puede requerir un <FilesMatch "\.php$">
+# con SetHandler y el SOCKET REAL encontrado en /run/php/.
